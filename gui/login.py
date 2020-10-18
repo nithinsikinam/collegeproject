@@ -2,7 +2,7 @@ from tkinter import *
 
 root = Tk()  
 
-root.iconbitmap('D:\my project\cms-project\collegeproject\gui\icon.ico')
+root.iconbitmap('D:\my project\cms-project\collegeproject\gui\assets\img\icon.ico')
 # Defining the window size
 root.geometry("200x150")
 # Fixing the window size
