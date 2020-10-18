@@ -1,0 +1,8 @@
+-------------------------------------------
+-> icon syntax
+from tkinter import Tk
+master = Tk()
+
+photo = PhotoImage(file = "Any image file")
+master.iconphoto(False, photo)
+--------------------------------------------
