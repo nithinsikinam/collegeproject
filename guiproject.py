@@ -1,2 +1,1 @@
-from tkinter import *
-print(10)
+print("nithiin coder")
