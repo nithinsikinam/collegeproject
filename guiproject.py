@@ -1,3 +1,3 @@
 from tkinter import *
-print(12
+print(5
 )
