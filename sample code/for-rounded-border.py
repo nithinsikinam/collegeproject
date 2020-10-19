@@ -28,6 +28,6 @@ def round_rectangle(x1, y1, x2, y2, radius=25, **kwargs):
 
     return canvas.create_polygon(points, **kwargs, smooth=True)
 
-my_rectangle = round_rectangle(50, 50, 150, 100, radius=20, fill="blue")
+my_rectangle = round_rectangle(50, 50, 150, 100, radius=5, fill="blue")
 
 root.mainloop()
