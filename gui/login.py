@@ -26,12 +26,13 @@ poster['font']=myFont
 poster.pack()
 #Right Login form design
 #------------------------------------------------------------------------------------
-frameRight = Frame(root,borderwidth=1, relief="groove",width=850,height=802,bg="#fff")
+frameRight = Frame(root,borderwidth=0, relief="groove",width=850,height=802,bg="#fff",pady="60",padx="10")
 frameRight.pack(side=RIGHT)
 frameRight.pack_propagate(0)
 
-loginForm = Label(frameRight, text="Red",bg="#fff")
+loginForm = Frame(frameRight,borderwidth=1, relief="groove",width=500,height=500,bg="#000000")
 loginForm.pack()
+loginForm.pack_propagate(0)
 
 
 
