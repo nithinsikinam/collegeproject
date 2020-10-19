@@ -95,7 +95,5 @@ buttonFrame.pack()
 loginButton = Button(buttonFrame,text="Sign in",command= submit)
 loginButton.pack()
 
+root.mainloop()
 
-
-
-root.mainloop()  
