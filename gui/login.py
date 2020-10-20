@@ -31,7 +31,6 @@ class Login:
             succ=""
             err=""
 
-<<<<<<< HEAD
             name=username.get() 
             passw=password.get() 
             
@@ -40,16 +39,6 @@ class Login:
             
             username.set("") 
             password.set("") 
-=======
-root.iconbitmap('D:\college project\gui\image\icon.ico')
-# Defining the window size
-root.geometry("1300x720")
-# Fixing the window size
-root.resizable()
-# Title bar Title
-root.title('cms project')
-# Title Bar Icon
->>>>>>> 55111f235d2b16bcde8469aa7778a7420f08b9f0
 
             if userid == name and userpass==passw:
                 # succ= Label(innerFrame,text="You are logged in successfully",bg="#fff",padx="30",fg="green")
