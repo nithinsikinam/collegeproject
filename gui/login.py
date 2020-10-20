@@ -3,6 +3,7 @@
 from tkinter import *  
 # from tkinter.ttk import *
 import tkinter.font as font
+import xml.etree.ElementTree as xml
 
 #==========Login=============
 class Login:
@@ -43,7 +44,25 @@ class Login:
             if userid == name and userpass==passw:
                 # succ= Label(innerFrame,text="You are logged in successfully",bg="#fff",padx="30",fg="green")
                 # succ.pack()
-                print("good")
+               #=========session for storing data============ 
+                def GenerateXML(fileName):
+                    root=xml.Element("root")
+                    cl=xml.Element("login")
+                    root.append(cl)
+                    type1=xml.SubElement(cl,"username")
+                    type1.text=name
+
+                    Amount1=xml.SubElement(cl,"password")
+                    Amount1.text=passw
+
+                    tree=xml.ElementTree(root)
+                    with open(fileName,"wb") as files:
+                        tree.write(files)
+
+                if __name__=="__main__":
+                    GenerateXML("session_pin.xml")
+
+
 
             else:
                 # err= Label(innerFrame,text="Username or password wrong!",bg="#fff",padx="30",fg="red")
