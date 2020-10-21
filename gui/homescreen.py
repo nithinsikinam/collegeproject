@@ -20,11 +20,11 @@ global frameh
 
 if (screenw==1920):
     idw=420
-    framew=500
+    framew=480
     frameh=1020
 elif (screenw >= 1600):
     idw=400
-    framew=400  
+    framew=380  
     frameh=900
 
 
@@ -32,15 +32,17 @@ elif (screenw >= 1600):
 #--------------------------------------------------------------------------------------------------------
 #frames
 frameL = Frame(root,borderwidth=10, relief="groove",width=framew,height=650,bg="#133c55")
-frameL.grid(row=0,column=1)
+frameL.grid(row=0,column=1 ,padx=20,pady=50)
 frameL.pack_propagate(0)
 
+
+
 framem = Frame(root,borderwidth=10, relief="groove",width=framew,height=650,bg="#133c55")
-framem.grid(row=0,column=2)
+framem.grid(row=0,column=2,padx=20,pady=50)
 framem.pack_propagate(0)
 
 framer = Frame(root,borderwidth=10, relief="groove",width=framew,height=650,bg="#133c55")
-framer.grid(row=0,column=3)
+framer.grid(row=0,column=3,padx=20,pady=50)
 framer.pack_propagate(0)
 
 

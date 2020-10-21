@@ -13,7 +13,7 @@ class Login:
     def __init__(self,root):
 
         self.root=root
-        self.root.iconbitmap('D:\collegeproject\gui\image\icon.ico')
+        self.root.iconbitmap('D:\college project\gui\image\icon.ico')
         # Defining the window size
         self.root.geometry("1300x720")
         # Fixing the window size
@@ -142,7 +142,7 @@ class Home:
 
 root = Tk()  
 
-#==========chacking he session======
+#==========checking he session======
 
 #   usernameDb="hasan"
 #   passwordDb="ali"
