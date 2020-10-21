@@ -4,6 +4,8 @@ from tkinter import *
 # from tkinter.ttk import *
 import tkinter.font as font
 import xml.etree.ElementTree as xml
+import os
+from xml.etree import ElementTree
 
 #==========Login=============
 class Login:
@@ -141,18 +143,33 @@ class Home:
 
 
 root = Tk()  
-    
-# a = 33
-# b = 33
-# if b > a:
-#   obj=Home(root)
-# elif a == b:
-#   obj=Login(root)
-# else:
-#   print("a is greater than b")
 
+#==========chacking he session======
 
+#   usernameDb="hasan"
+#   passwordDb="ali"
 
-obj=Login(root)
+filename= "session_pin.xml"
+fullfile= os.path.abspath(os.path.join( filename))
+
+dom = ElementTree.parse(fullfile)
+
+username = dom.findall('login/username')
+password = dom.findall('login/password')
+
+for c in username:
+
+    usernamexml = c.text
+
+for l in password:
+
+    passwordxml = l.text
+
+    if usernamexml == 'hasan' and passwordxml == '1234':
+       obj=Home(root)
+    else:
+       obj=Login(root)
+           
+
 root.mainloop()
 
