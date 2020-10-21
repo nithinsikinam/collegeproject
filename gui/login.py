@@ -6,7 +6,8 @@ import tkinter.font as font
 import xml.etree.ElementTree as xml
 import os
 from xml.etree import ElementTree
-
+from tkinter import messagebox
+           
 #==========Login=============
 class Login:
     def __init__(self,root):
@@ -67,9 +68,8 @@ class Login:
 
 
             else:
-                # err= Label(innerFrame,text="Username or password wrong!",bg="#fff",padx="30",fg="red")
-                # err.pack()
-                print("bad")
+            
+                messagebox.showinfo("Login", "Username or password wrong!")
 
  #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           
 
@@ -96,42 +96,40 @@ class Login:
         frameRight.pack(side=RIGHT)
         frameRight.pack_propagate(0)
 
-        loginForm = Frame(frameRight,bg="#fff",pady="30",width=500,height=400)
+        loginForm = Frame(frameRight,bg="#fff",pady="40",padx="50",width=350,height=300)
         loginForm.pack()
         loginForm.pack_propagate(0)
 
         #sign in label
         loginTitle= Label(loginForm,text="Sign in",bg="#fff",fg="#386fa4")
         loginTitle['font']=loginFont
-        loginTitle.pack()
+        loginTitle.place(x="60",y="-20")
 
         #for input frame
         innerFrame = Frame(loginForm,bg="#fff",pady="30",width=500,height=250)
-        innerFrame.pack(side=LEFT)
+        innerFrame.place(x="0",y="30")
         innerFrame.pack_propagate(0)
 
         #username label
         usernameTitle= Label(innerFrame,text="Username",bg="#fff",padx="30")
-        usernameTitle.pack()
+        usernameTitle.place(x="0",y="-10")
 
         #username Entery input
-        usernameEntery = Entry(innerFrame,bg="#e3e6e8",fg="#3e3f40",bd="1",relief="solid",textvariable = username)
-        usernameEntery.pack(ipadx=30,ipady=3)
+        usernameEntery = Entry(innerFrame,bg="#ededed",fg="#3e3f40",bd="1",relief="solid",textvariable = username)
+        usernameEntery.place(x="35",y="20")
 
         #Password label
         passTitle= Label(innerFrame,text="Password",bg="#fff",padx="30")
-        passTitle.pack()
+        passTitle.place(x="0",y="50")
 
         #Password Entery input
-        passEntery = Entry(innerFrame,bg="#e3e6e8",fg="#3e3f40",bd="1",relief="solid", show='*',textvariable = password)
-        passEntery.pack(ipadx=30,ipady=3)
+        passEntery = Entry(innerFrame,bg="#ededed",fg="#3e3f40",bd="1",relief="solid", show='*',textvariable = password)
+        passEntery.place(x="35",y="80")
 
-        #sign in button button 
-        buttonFrame = Frame(innerFrame,bg="#fff",pady="10")
-        buttonFrame.pack()
 
-        loginButton = Button(buttonFrame,text="Sign in",command= submit)
-        loginButton.pack()
+        #Sign in button
+        loginButton = Button(innerFrame,text="Sign in",command= submit)
+        loginButton.place(x="95",y="120")
 
 #==========Home screen===========
 class Home:
