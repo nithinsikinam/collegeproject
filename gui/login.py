@@ -13,14 +13,6 @@ class Login:
     def __init__(self,root):
 
         self.root=root
-        self.root.iconbitmap('D:\collegeproject\gui\image\icon.ico')
-        # Defining the window size
-        self.root.geometry("1300x720")
-        # Fixing the window size
-        self.root.resizable()
-        # Title bar Title
-        self.root.title('cms project')
-        # Title Bar Icon
 
 #~~~~~~~~~~~~~~~~~~~~~on click function for submit button~~~~~~~~~~~~~~~~~~~~~
 
@@ -31,22 +23,15 @@ class Login:
         userpass="1234"
 
         def submit(): 
-        
-            succ=""
-            err=""
 
             name=username.get() 
             passw=password.get() 
-            
-            # print("The name is : " + name) 
-            # print("The password is : " + passw) 
-            
+
             username.set("") 
             password.set("") 
 
             if userid == name and userpass==passw:
-                # succ= Label(innerFrame,text="You are logged in successfully",bg="#fff",padx="30",fg="green")
-                # succ.pack()
+
                #=========session for storing data============ 
                 def GenerateXML(fileName):
                     root=xml.Element("root")
@@ -64,8 +49,10 @@ class Login:
 
                 if __name__=="__main__":
                     GenerateXML("session_pin.xml")
-
-
+                    
+                frameLeft.destroy()
+                frameRight.destroy()
+                obj=Home(root)    
 
             else:
             
@@ -167,7 +154,15 @@ for l in password:
        obj=Home(root)
     else:
        obj=Login(root)
-           
 
+           
+root.iconbitmap('D:\collegeproject\gui\image\icon.ico')
+# Defining the window size
+root.geometry("1300x720")
+# Fixing the window size
+root.resizable()
+# Title bar Title
+root.title('cms project')
+# Title Bar Icon
 root.mainloop()
 
