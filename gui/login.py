@@ -122,8 +122,48 @@ class Login:
 class Home:
     def __init__(self,root):
 
-        self.root=root
-        self.label=Label(text="dddddd").pack()
+          self.root=root
+
+#000000  Left manu  000000000
+
+          LeftManu = Frame(self.root,bg="#133c55",width="350",height="1050")
+          LeftManu.pack(side=LEFT)
+          LeftManu.pack_propagate(0)
+
+#000000  Right main 00000000    
+
+          main = Frame(self.root,bg="White",width="1650",height="1050") 
+          main.pack(side=RIGHT)
+          main.pack_propagate(0)
+
+#@@@@@@ three colmuns  @@@@@
+          colmain = Frame(main,width="1650",height="500",bg="white")
+          colmain.place(y=210,x=80)
+          colmain.pack_propagate(0)
+
+          colf1 = Frame(colmain,pady="20",bg="white",width="350",height="500")
+          colf1.pack(side=LEFT)
+          colf1.pack_propagate(0)
+          col1 = Frame(colf1,bg="#dce4e7",width="300",height="350") 
+          col1.pack()
+          
+
+          colf2 = Frame(colmain,pady="20",bg="white",width="350",height="500")
+          colf2.pack(side=LEFT)
+          colf2.pack_propagate(0)
+          col2 = Frame(colf2,bg="#dce4e7",width="300",height="350") 
+          col2.pack()
+         
+
+          colf3 = Frame(colmain,pady="20",bg="white",width="350",height="500")
+          colf3.pack(side=LEFT)
+          colf3.pack_propagate(0)
+          col3 = Frame(colf3,bg="#dce4e7",width="300",height="350") 
+          col3.pack()
+         
+
+
+
 
 
 
