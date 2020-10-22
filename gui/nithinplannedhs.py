@@ -2,7 +2,7 @@ from tkinter import *
 
 root = Tk()  
 
-root.iconbitmap('D:\collegeproject\gui\image\icon.ico')
+root.iconbitmap('D:\college project\gui\image\icon.ico')
 # Defining the window size
 root.geometry("200x150")
 # Fixing the window size
@@ -11,13 +11,30 @@ root.resizable()
 root.title('cms project')
 # Title Bar Icon
 
-class channel:
-    def __init__(self,name,type):
-        self.name= name
-        self.type= type 
+def submit():
+    globals()[E1.get()]=channel(E1.get())
+    
 
-    def createicon():
-        =Button(root,Text=se)
+
+channelmake=Button(root,text="new channel",command=submit)
+channelmake.pack()
+
+chname=Label(root,text="Enter Channel name:")
+chname.pack()
+
+E1 = Entry(root)
+E1.pack()
+
+
+
+class channel:
+    def __init__(self,name):
+        self.name= name      
+        globals()[self.name+"btn"] = Button(root, text=self.name)
+        globals()[self.name+"btn"].pack()
+    
+
+
 
 
 
