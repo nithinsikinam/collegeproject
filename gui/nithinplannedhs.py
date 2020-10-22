@@ -2,7 +2,7 @@ from tkinter import *
 
 root = Tk()  
 
-root.iconbitmap('D:\collegeproject\gui\image\icon.ico')
+root.iconbitmap('D:\college project\gui\image\icon.ico')
 # Defining the window size
 root.geometry("200x150")
 # Fixing the window size
@@ -14,11 +14,14 @@ root.title('cms project')
 class channel:
     def __init__(self,name,type):
         self.name= name
-        self.type= type 
+        self.type= type       
+        globals()[self.name] = Button(root, text=self.name)
+        globals()[self.name].pack()
+    
 
-    def createicon():
-        =Button(root,Text=se)
-
+bca=channel("bca","ok")
+bsc=channel("bsc","done")
+b_com=channel("b_com","hello")
 
 
 root.mainloop()  
