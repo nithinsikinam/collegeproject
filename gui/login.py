@@ -7,7 +7,7 @@ import xml.etree.ElementTree as xml
 import os
 from xml.etree import ElementTree
 from tkinter import messagebox
-           
+from PIL import ImageTk, Image        
 #==========Login=============
 class Login:
     def __init__(self,root):
@@ -122,13 +122,61 @@ class Login:
 class Home:
     def __init__(self,root):
 
+          global profile 
+          global settingB
           self.root=root
+
 
 #000000  Left manu  000000000
 
-          LeftManu = Frame(self.root,bg="#133c55",width="350",height="1050")
+          LeftManu = Frame(self.root,bg="#133c55",width="350",height="1050",pady="150")
           LeftManu.pack(side=LEFT)
           LeftManu.pack_propagate(0)
+
+          # create a profile Image
+          profile = ImageTk.PhotoImage(Image.open("D:\collegeproject\gui\image\ok.png"))
+          panel = Label(LeftManu, image = profile, bg="#133c55")
+          panel.pack()
+
+          #id lable
+          idLabel= Label(LeftManu,text="#478214",bg="#133c55",fg="White",pady="10",font=("arial", 20, "bold"))
+          idLabel.pack()
+
+          #Email lable
+          emailLabel= Label(LeftManu,text="hasanaligathamaniya476@gmail.com",bg="#133c55",fg="White",font=("arial", 13, "bold"))
+          emailLabel.pack()
+
+          #side navbar
+          navFrame= Frame(LeftManu,bg="#718898",width="200",height="250")
+          navFrame.place(x="80",y="250")
+
+          #b1 manuButton1.pmg
+          b1=Button(navFrame,bg="#718898",text="Manu",activebackground="#718898",pady="7",padx="70",fg="white",font=("arial", 15, "bold"))
+          b1.pack()
+
+          #b2 manuButton1.pmg
+          b2=Button(navFrame,bg="#718898",text="Manu",activebackground="#718898",pady="7",padx="70",fg="white",font=("arial", 15, "bold"))
+          b2.pack()
+
+          #b3 manuButton1.pmg
+          b3=Button(navFrame,bg="#718898",text="Manu",activebackground="#718898",pady="7",padx="70",fg="white",font=("arial", 15, "bold"))
+          b3.pack()
+
+          #b4 manuButton1.pmg
+          b4=Button(navFrame,bg="#718898",text="Manu",activebackground="#718898",pady="7",padx="70",fg="white",font=("arial", 15, "bold"))
+          b4.pack()
+
+          #v,label
+          vLabel=Label(LeftManu,text="V.0.1",fg="white",bg="#133c55")
+          vLabel.place(x=5,y=615)
+
+
+          #setting button
+          settingB = ImageTk.PhotoImage(Image.open("D:\collegeproject\gui\image\setting2.png"))
+          settingB1=Button(LeftManu,bg="#133c55",image=settingB,activebackground="#133c55")
+          settingB1.place(x=280,y=580)
+          
+            
 
 #000000  Right main 00000000    
 
@@ -147,13 +195,11 @@ class Home:
           col1 = Frame(colf1,bg="#dce4e7",width="300",height="350") 
           col1.pack()
           
-
           colf2 = Frame(colmain,pady="20",bg="white",width="350",height="500")
           colf2.pack(side=LEFT)
           colf2.pack_propagate(0)
           col2 = Frame(colf2,bg="#dce4e7",width="300",height="350") 
           col2.pack()
-         
 
           colf3 = Frame(colmain,pady="20",bg="white",width="350",height="500")
           colf3.pack(side=LEFT)
