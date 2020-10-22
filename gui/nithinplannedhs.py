@@ -11,17 +11,31 @@ root.resizable()
 root.title('cms project')
 # Title Bar Icon
 
-class channel:
-    def __init__(self,name,type):
-        self.name= name
-        self.type= type       
-        globals()[self.name] = Button(root, text=self.name)
-        globals()[self.name].pack()
+def submit():
+    globals()[E1.get()]=channel(E1.get())
     
 
-bca=channel("bca","ok")
-bsc=channel("bsc","done")
-b_com=channel("b_com","hello")
+
+channelmake=Button(root,text="new channel",command=submit)
+channelmake.pack()
+
+chname=Label(root,text="Enter Channel name:")
+chname.pack()
+
+E1 = Entry(root)
+E1.pack()
+
+
+
+class channel:
+    def __init__(self,name):
+        self.name= name      
+        globals()[self.name+"btn"] = Button(root, text=self.name)
+        globals()[self.name+"btn"].pack()
+    
+
+
+
 
 
 root.mainloop()  
