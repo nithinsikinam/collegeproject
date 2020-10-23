@@ -124,6 +124,9 @@ class Home:
 
           global profile 
           global settingB
+          global icon
+          global icon2
+          global icon3
           self.root=root
 
 
@@ -189,23 +192,59 @@ class Home:
           colmain.place(y=210,x=80)
           colmain.pack_propagate(0)
 
+          #manu one  
           colf1 = Frame(colmain,pady="20",bg="white",width="350",height="500")
           colf1.pack(side=LEFT)
           colf1.pack_propagate(0)
           col1 = Frame(colf1,bg="#dce4e7",width="300",height="350") 
           col1.pack()
-          
+          col1.pack_propagate(0)
+
+          icon = ImageTk.PhotoImage(Image.open("D:\collegeproject\gui\image\icon.png"))
+          iconLabel=Label(col1,bg="#dce4e7",image=icon)
+          iconLabel.place(y="30",x="85")
+
+          manuLabel= Label(col1,text="Manu1",pady="40",bg="#dce4e7",fg="#233a4a",font=("arial", 20, "bold"))
+          manuLabel.place(y="150",x="105")
+
+          manuButton=Button(col1,bg="#3a6fa5",text="Manu",activebackground="#3a6fa5",pady="7",padx="55",fg="white",font=("arial", 15, "bold"))
+          manuButton.place(y="250",x="63")
+
+          #manu2
           colf2 = Frame(colmain,pady="20",bg="white",width="350",height="500")
           colf2.pack(side=LEFT)
           colf2.pack_propagate(0)
           col2 = Frame(colf2,bg="#dce4e7",width="300",height="350") 
           col2.pack()
 
+          icon2 = ImageTk.PhotoImage(Image.open("D:\collegeproject\gui\image\icon.png"))
+          iconLabel=Label(col2,bg="#dce4e7",image=icon)
+          iconLabel.place(y="30",x="85")
+
+          manuLabel= Label(col2,text="Manu1",pady="40",bg="#dce4e7",fg="#233a4a",font=("arial", 20, "bold"))
+          manuLabel.place(y="150",x="105")
+
+          manuButton=Button(col2,bg="#3a6fa5",text="Manu",activebackground="#3a6fa5",pady="7",padx="55",fg="white",font=("arial", 15, "bold"))
+          manuButton.place(y="250",x="63")
+
+          #manu3  
           colf3 = Frame(colmain,pady="20",bg="white",width="350",height="500")
           colf3.pack(side=LEFT)
           colf3.pack_propagate(0)
           col3 = Frame(colf3,bg="#dce4e7",width="300",height="350") 
           col3.pack()
+
+          icon3 = ImageTk.PhotoImage(Image.open("D:\collegeproject\gui\image\icon.png"))
+          iconLabel=Label(col3,bg="#dce4e7",image=icon)
+          iconLabel.place(y="30",x="85")
+
+          manuLabel= Label(col3,text="Manu1",pady="40",bg="#dce4e7",fg="#233a4a",font=("arial", 20, "bold"))
+          manuLabel.place(y="150",x="105")
+
+          manuButton=Button(col3,bg="#3a6fa5",text="Manu",activebackground="#3a6fa5",pady="7",padx="55",fg="white",font=("arial", 15, "bold"))
+          manuButton.place(y="250",x="63")
+
+          
          
 
 
