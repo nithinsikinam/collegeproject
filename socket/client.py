@@ -1,6 +1,6 @@
 import socket                
   
-print("hello")
+print("hellok")
 c = socket.socket()          
   
 
